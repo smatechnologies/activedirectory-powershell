@@ -29,7 +29,7 @@ elseif($option -eq "new")
     #---- New Active Directory account ----
     try
     {
-        New-ADUser $adname -name "$name" -title "$title"  -EmailAddress "glenjohn@fabrikam.com"
+        New-ADUser $adname -name "$name" -title "$title" -EmailAddress "$email"
         Enable-ADAccount -Identity $adname
     }
     Catch
