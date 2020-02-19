@@ -1,19 +1,32 @@
-# Project Name
-Project description
+# Active Directory with Powershell
+This script contains several simple examples of how to manage Active Directory with Powershell.
+
+# Prerequisites
+* Powershell 5.1
+* <a href url="https://docs.microsoft.com/en-us/powershell/module/activedirectory/?view=winserver2012-ps&viewFallbackFrom=win10-ps">Active Directory</a> cmdlets installed on the pc/server
+
+# Instructions
+This script contains several parameters depending on the option:
+* <b>adName</b> - Login name for the active directory account
+* <b>email</b> - Email address associated with the active directory account
+* <b>name</b> - First and last name
+* <b>title</b> - Title of the account
+* <b>oldpw</b> - Used when supplying current password for resets (could be used as a means of MFA)
+* <b>pw</b> - New password for resetting accounts
+* <b>option</b> - new/unlock/reset
+
+Execution example: <br>
+```
+powershell.exe -ExecutionPolicy Bypass -File Active_Directory_Examples.ps1 -option "unlock" -adname "jsmith" 
+```
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
 
 SMA Technologies assumes no liability for damage caused by the usage of any of the files offered here via this Github repository.
 
-# Prerequisites
-
-
-# Instructions
-
-
 # License
-Copyright 2019 SMA Technologies
+Copyright 2020 SMA Technologies
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
