@@ -18,6 +18,7 @@ try
     if($results.Count -gt 0) 
     {
         $results | ForEach-Object{ $body = $body + "<br>Name: " + $_.Name + "<br>Mail: " + $_.Mail + "<br>Enabled: " + $_.Enabled + "<br>LockedOut: " + $_.LockedOut + "<br>PasswordExpired: " + $_.PasswordExpired + "<br>" }
+        $body = $body + "<br>Self Service: <a href='" + $selfserviceLink + "'>Click here</a>"
         $subject = "AD locked accounts report " + (Get-Date -Format "MM/dd/yyyy hh:mm")
  
         $secpasswd = ConvertTo-SecureString "$password" -AsPlainText -Force
